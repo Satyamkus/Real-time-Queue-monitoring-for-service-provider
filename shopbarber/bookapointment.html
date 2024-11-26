@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking</title>
+    <style>
+        /* Basic reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container styling */
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 2em;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Heading styling */
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 1em;
+        }
+
+        /* Input and label styling */
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #555;
+            display: block;
+        }
+
+        input[type="text"], input[type="date"], input[type="time"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        /* Button styling */
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Appointment Booking Form</h2>
+    <form id="appointmentForm">
+        <!-- Name Field -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+        <!-- Date Field -->
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <!-- Time Field -->
+        <label for="time">Select Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="Address" required>
+
+        
+
+        <!-- Duration Field -->
+        <label for="duration">Select Duration:</label>
+        <select id="duration" name="duration" required>
+            <option value="">Choose duration</option>
+            <option value="30">30 Minutes</option>
+            <option value="60">1 Hour</option>
+            <option value="90">1.5 Hours</option>
+            <option value="120">2 Hours</option>
+        </select>
+
+        <!-- Service Field -->
+        <label for="service">Select Service:</label>
+        <select id="service" name="service" required>
+            <option value="">Choose a service</option>
+            <option value="haircut">Haircut</option>
+            
+            <option value="repair">Device Repair</option>
+            <option value="consultation">Medical Consultation</option>
+        </select>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">Book Appointment</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Simple validation message
+        alert("Appointment successfully booked!");
+    });
+</script>
+
+</body>
+</html>
